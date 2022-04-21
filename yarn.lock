@@ -468,6 +468,18 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+configcat-common@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/configcat-common/-/configcat-common-4.6.2.tgz#ef37114cf77c10378e686078bc45903508e0ed49"
+  integrity sha512-o7qp5xb3K9w3tL0dK0g2/IwzOym4SOcdl+Hgh7d1125fKamDk8Jg6nBb+jEkA0qs0msYI+kpcL7pEsihYUhEDg==
+
+configcat-js@^5.7.2:
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/configcat-js/-/configcat-js-5.7.2.tgz#2466269f941c8564c0d2670ffbc74dc0657f1450"
+  integrity sha512-Pvryi3y1z1ZyhId5fGv6Weel6YU6EuTHHYdfY1SOaVSvNeXNU9HwLpzMUCwdINtSXyxtHd0xUMumRUje2h7/Ng==
+  dependencies:
+    configcat-common "^4.6.2"
+
 core-js-pure@^3.20.2:
   version "3.22.1"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.22.1.tgz#4d94e0c9a7b710da20dadd727fe98b43543119f0"

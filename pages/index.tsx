@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import {useEffect, useState} from "react";
+import configCat from "../src/utils/configCat";
 
 interface UserType {
     id: number;
@@ -9,6 +10,10 @@ interface UserType {
 
 const Home: NextPage = () => {
     const [data, setData] = useState<UserType[]>();
+    const [showEmail, setShowEmail] = useState<boolean>(false);
+
+    configCat.getValueAsync("showEmail",  false)
+        .then( value => { setShowEmail(value) });
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -36,9 +41,11 @@ const Home: NextPage = () => {
                               <dt>
                                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{item.name}</p>
                               </dt>
-                              <dd className="mt-2 ml-16 text-base text-gray-500">
-                                  <strong>@</strong> {item.email}
-                              </dd>
+                              {showEmail && (
+                                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                                      <strong>@</strong> {item.email}
+                                  </dd>
+                              )}
                           </div>
                       ))}
                   </dl>
